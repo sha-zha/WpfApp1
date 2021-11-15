@@ -17,16 +17,21 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
-        <Label x:Name="title">Names</Label>
-        <ListBox Grid.Row="1" x:Name="lstNames" />
 
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
 
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+            <TextBlock TextWrapping="Wrap"><Run Language="fr-fr" Text="lien dépot"/></TextBlock>
             <TextBox x:Name="txtName" />
-            <Button x:Name="btnAdd" Margin="0,5,0,0" Click="ButtonAddName_Click">GET Version</Button>
+            <TextBlock TextWrapping="Wrap"><Run Language="fr-fr" Text="chemin "/></TextBlock>
+            <TextBox x:Name="directory" />
+            <Button x:Name="btnAdd" Click="RunCmd" Content="Lancer git clone"/>
+            <Button x:Name="btnGitAdd" Click="RunGitAdd" Content="git add"/>
+            <TextBlock TextWrapping="Wrap"><Run Language="fr-fr" Text="Message commit"/></TextBlock>
+            <TextBox x:Name="commitText" Width="356" />
+            <Button x:Name="btnGitCommit" Click="RunGitCommit" Content="git commit"/>
+            <Button x:Name="btnGitPush" Click="RunGitPush" Content="git push"/>
         </StackPanel>
 
     </Grid>
