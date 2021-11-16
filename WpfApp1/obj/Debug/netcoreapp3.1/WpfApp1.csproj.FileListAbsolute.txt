@@ -60,3 +60,5 @@ C:\Users\Dell\Desktop\.NET\WpfApp1\WpfApp1\obj\Debug\netcoreapp3.1\WpfApp1.Assem
 C:\Users\Dell\Desktop\.NET\WpfApp1\WpfApp1\obj\Debug\netcoreapp3.1\WpfApp1.AssemblyInfo.cs
 C:\Users\Dell\Desktop\.NET\WpfApp1\WpfApp1\obj\Debug\netcoreapp3.1\WpfApp1.csproj.CoreCompileInputs.cache
 C:\Users\Dell\Desktop\.NET\WpfApp1\WpfApp1\obj\Debug\netcoreapp3.1\WpfApp1.genruntimeconfig.cache
+C:\Users\Dell\Desktop\.NET\WpfApp1\WpfApp1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Dell\Desktop\.NET\WpfApp1\WpfApp1\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll

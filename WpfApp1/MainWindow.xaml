@@ -5,34 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Names" Height="450" Width="800">
-    <Grid Margin="10">
+        Title="UI GIT" Height="500" Width="800">
+    <Grid>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        <Grid VerticalAlignment="Top" Height="50" Background="#FF006866">
+          
+        </Grid>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+        <Grid  Background="#FF006866" HorizontalAlignment="Left" Width="100">
 
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+            <StackPanel>
 
-        </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
-            <TextBlock TextWrapping="Wrap"><Run Language="fr-fr" Text="lien dépot"/></TextBlock>
-            <TextBox x:Name="txtName" />
-            <TextBlock TextWrapping="Wrap"><Run Language="fr-fr" Text="chemin "/></TextBlock>
-            <TextBox x:Name="directory" />
-            <Button x:Name="btnAdd" Click="RunCmd" Content="Lancer git clone"/>
-            <Button x:Name="btnGitAdd" Click="RunGitAdd" Content="git add"/>
-            <TextBlock TextWrapping="Wrap"><Run Language="fr-fr" Text="Message commit"/></TextBlock>
-            <TextBox x:Name="commitText" Width="356" />
-            <Button x:Name="btnGitCommit" Click="RunGitCommit" Content="git commit"/>
-            <Button x:Name="btnGitPush" Click="RunGitPush" Content="git push"/>
-        </StackPanel>
+                <Grid Background="Transparent" Height="100">
+
+                </Grid>
+                <ListView FontSize="14" Background="Transparent" BorderBrush="Transparent">
+                    <ListViewItem Height="30">
+                        <TextBlock Text="Git clone" TextWrapping="Wrap" Foreground="White"/>
+                    </ListViewItem>
+                </ListView>
+                <ListView FontSize="14" Background="Transparent" BorderBrush="Transparent">
+                    <ListViewItem Height="30">
+                        <Button Content="Git add" Foreground="White" Click="RunGitAdd" Background="Transparent" BorderBrush="Transparent"/>
+                    </ListViewItem>
+                </ListView>
+
+                <ListView FontSize="14" Background="Transparent" BorderBrush="Transparent">
+                    <ListViewItem Height="30">
+                        <TextBlock Text="Git commit" TextWrapping="Wrap" Foreground="White"/>
+                    </ListViewItem>
+                </ListView>
+
+                <ListView FontSize="14" Background="Transparent" BorderBrush="Transparent">
+                    <ListViewItem Height="30">
+                        <Button Content="Git Push" Foreground="White" Click="RunGitPush" Background="Transparent" BorderBrush="Transparent"/>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+        </Grid>
+        <Grid HorizontalAlignment="Right" Width="auto">
+
+            <StackPanel Margin="-367,96,189,60" >
+                <TextBlock Name="textbox" Foreground="Red"/>
+                <TextBlock TextWrapping="Wrap" FontFamily="Yu Gothic UI" FontSize="16" Foreground="#FF8E8E8E"><Run Language="fr-fr" Text="lien dépot"/></TextBlock>
+                <TextBox x:Name="txtName" Height="30" />
+                <TextBlock TextWrapping="Wrap" Foreground="#FF8E8E8E" FontSize="16" FontFamily="Yu Gothic UI"><Run Language="fr-fr" Text="chemin "/></TextBlock>
+                <TextBox x:Name="directory" Height="30" Margin="0,0,0,10" />
+                <Button x:Name="btnAdd" Click="RunCmd" Content="Lancer git clone" Background="#FF006866" Foreground="White" FontFamily="Yu Gothic" FontSize="14" RenderTransformOrigin="0.5,0.5" BorderBrush="#FF004F4E" BorderThickness="1,1,1,1">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0"/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+                <TextBlock TextWrapping="Wrap" Foreground="#FF8E8E8E" FontFamily="Yu Gothic UI" FontSize="16" Margin="0,10,0,0"><Run Language="fr-fr" Text="Message commit"/></TextBlock>
+                <TextBox x:Name="commitText" Width="356" Height="30" Margin="0,0,0,10" />
+                <Button x:Name="btnGitCommit" Click="RunGitCommit" Content="git commit" FontSize="16" FontFamily="Yu Gothic UI" Foreground="White" Background="#FF006866"/>
+
+            </StackPanel>
+        </Grid>
 
     </Grid>
+
+
 </Window>
